@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} - Zipcode{% endblock %}
+{% block content %}
+
+<div class="row">
+   <form id='userinfoform' method='post' action='zipcode' >
+     <div class="form-group">
+         <label for="sel1">Enter a zipcode to explore</label>
+           <br>
+              <input type="text" name="zipcode" placeholder="94102"><br>
+     </div>
+         <p>
+           <button class="btn btn-primary" type="submit">Submit</button>
+         </p>
+     </form>
+</div>
+
+{% endblock %}

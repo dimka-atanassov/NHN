@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %} - Home{% endblock %}
+{% block content %}
+         <div class="jumbotron">
+             <br>
+            <h2>Welcome!</h2>
+            <p>Explore San Francisco housing prices and the relationship between housing prices and crime rates. See how housing pricing and crime rates have changed in past years, and see predictions about future trends.<p>
+            <p>Whether you are looking to buy, sell, or even rent in San Francisco, this product is for you!</p>
+             <br>
+        </div>
+        <div class = "row"> 
+            <h2>Start Exploring</h2>
+            <div class  = "col-md-4">
+                <br>
+                    <a class="btn btn-primary center-block" href="/historic" role="button">Explore Historic Data</a>
+                    <br>
+                    <p>See which zipcode areas have beaten the market in the past and had an increase in prices that was above average for San Francisco.</p>
+                <br>
+            </div>
+            <div class  = "col-md-4">
+                <br>
+                    <a class="btn btn-primary center-block" href="/zipcode" role="button">Explore Zipcode</a>
+                    <br>
+                    <p>See detailed information about a zipcode, including price changes in the past year and crime rates.</p>
+                <br>
+            </div>
+            <div class  = "col-md-4">
+                <br>
+                    <a class="btn btn-primary center-block" href="/predict" role="button">Predict</a>
+                    <br>
+                    <p>Want to know how your zipcode will do in 2016? See whether or not a given zipcode is predicted to beat the market, and have a housing price increase above the average for San Francisco in 2016.</p>
+                <br>
+            </div>
+        </div>
+        <div class = "row"> 
+            <h2>How it works</h2>
+            <h3>The Data</h3>
+                <p>Prices per square foot for the zipcodes in SF over time are from zillow, and crime data over time is  from the SF open data.
+                </p>
+            <h3>The Model</h3>
+            <p>Using pricing data for each of the zipcodes in San Francisco and crime data from the San Francisco open data I built a logistic regression model, making a prediction about whether or not a given zipcode area will beat the market.</p>
+            <p>Beating the market is defined as having a rise in price per square foot that is above the average rise for San Francisco.</p>
+            <p> As predictors I use normalized percentage of crime and crime type, looking at the crime occurring a year prior to the predicted year.</p>
+            <p>Using 21 features the model reaches over 65% accuracy.</p>
+            <img src = "/static/images/LCoefficients.jpg" caption = "Coefficients">
+            
+        </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

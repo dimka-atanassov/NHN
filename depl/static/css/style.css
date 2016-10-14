@@ -1,0 +1,17 @@
+.jumbotron {
+    background: #000 url("/static/images/SF1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    color: #FFF; 
+}
+.jumbotron p{
+    color: #FFF;
+    font-weight: bold;
+}
+
+.jumbotron h2{
+    color: #FFF;
+    font-weight: bold;
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} - Historic Data{% endblock %} 
+{% block content %}
+ <div class="row">
+        <form id='userinfoform' method='post' action='historic' >
+            <div class="form-group">
+              <label for="sel1">Select year:</label>
+                  <select class="form-control" id="sel1" name='drop-down'>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option> 
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>  
+              </select>
+            </div>
+              <p>
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                
+              </p>
+         </form>
+        </div>
+
+{% endblock %}

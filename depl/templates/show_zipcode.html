@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %} - Zipcode{% endblock %}
+        
+{% block content %}
+
+<br>
+<div class = "row">
+<a class="btn btn-primary" href="/zipcode" role="button">Back</a>
+<br>
+<div class = "col-md-6">
+<h2 class="text-primary text-center"> Pricing data for {{zipcode}} </h2>
+    {{ script1 | safe}}
+    {{ div1 | safe }}
+    <p>For each year the change in price per square foot from last year (January to January)</p>
+</div>
+
+<div class = "col-md-6">
+<h2 class="text-primary text-center"> Crime percentage for {{zipcode}} </h2>
+
+    {{ script2 | safe}}
+    {{ div2 | safe }}
+    <p>The percentage of crime that occurred in this zipcode, out of the total number of crimes occurring in SF yearly</p>
+</div>
+</div>
+
+<!---<div class = "row">
+    <script>
+        d3.csv("/static/CrimeDataPerType2.csv", function(error, data) {
+    // do something with data
+        nv.addGraph(function() {
+          var chart = nv.models.discreteBarChart()
+              .x(function(d) { return d.Year })    //Specify the data accessors.
+              .y(function(d) { return d.total_in_yr })
+              .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+              .tooltips(false)        //Don't show tooltips
+              .showValues(true)       //...instead, show the bar value right on top of each bar.
+              .transitionDuration(350)
+      ;
+
+  d3.select('#chart svg')
+      .datum(data)
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+        
+   });
+
+    </script>
+<div id="chart"><svg></svg></div>
+</div>-->
+
+{% endblock %}

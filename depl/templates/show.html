@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} - Home{% endblock %}
+{% block content %}
+Data for {{year}}
+
+<br>
+<a class="btn btn-primary" href="/historic" role="button">Back</a>
+<br>
+<DIV ID="MAP"> {{show_map | safe}}</DIV>
+
+{% endblock %}
+

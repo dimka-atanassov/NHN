@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} - Home{% endblock %}
+{% block content %}
+Data for {{zipcode}}
+<br>
+{{result_text}}
+
+<br>
+<a class="btn btn-primary" href="/predict" role="button">Back</a>
+<br>
+
+{% endblock %}
